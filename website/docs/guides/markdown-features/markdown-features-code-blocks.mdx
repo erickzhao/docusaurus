@@ -41,15 +41,16 @@ console.log('Every repo must come with a mascot.');
 
 ### Theming {#theming}
 
-By default, the Prism [syntax highlighting theme](https://github.com/FormidableLabs/prism-react-renderer#theming) we use is [Palenight](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/themes/palenight.js). You can change this to another theme by passing `theme` field in `prism` as `themeConfig` in your docusaurus.config.js.
+By default, the Prism [syntax highlighting theme](https://github.com/FormidableLabs/prism-react-renderer#theming) we use is [Palenight](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/themes/palenight.js). You can use choose to use different themes using the `themeConfig.prism` field in your docusaurus.config.js.
 
-For example, if you prefer to use the `dracula` highlighting theme:
+For example, if you want to use the Night Owl theme, which has both dark and light versions available:
 
-```js {4} title="docusaurus.config.js"
+```js {4-5} title="docusaurus.config.js"
 module.exports = {
   themeConfig: {
     prism: {
-      theme: require('prism-react-renderer/themes/dracula'),
+      darkTheme: require('prism-react-renderer/themes/nightOwl'),
+      theme: require('prism-react-renderer/themes/nightOwlLight'),
     },
   },
 };
